@@ -1,5 +1,8 @@
 @echo off
-call "../../../utils/bat/typescript/install/%~n0" @types/jest
+call "../../../utils/bat/typescript/install/%~n0" ^
+  @types/jest ^
+  @vue/test-utils ^
+  vue-jest
 call "../../../utils/bat/typescript/install/%~n0/build-doc"
 call "../../../utils/bat/typescript/install/%~n0/commitlint"
 call "../../../utils/bat/typescript/install/%~n0/core"

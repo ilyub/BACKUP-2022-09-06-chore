@@ -4,5 +4,7 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @types/lodash-es ^
   flag-icon-css ^
   lodash ^
-  lodash-es
+  lodash-es ^
+  vue ^
+  vue-router
 if not "%1" == "nopause" pause
