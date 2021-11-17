@@ -2,9 +2,9 @@
 
 include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
 
-init('src', 'ts', 'script');
-init('src', 'html', 'template');
-init('src', 'scss', 'style');
+init('src', 'tmp.ts', 'script');
+init('src', 'tmp.html', 'template');
+init('src', 'tmp.scss', 'style');
 
 /**
  * Init.

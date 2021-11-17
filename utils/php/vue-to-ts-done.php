@@ -2,9 +2,9 @@
 
 include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
 
-done('src', 'ts', 'script');
-done('src', 'html', 'template');
-done('src', 'scss', 'style');
+done('src', 'tmp.ts', 'script');
+done('src', 'tmp.html', 'template');
+done('src', 'tmp.scss', 'style');
 
 /**
  * Done.
