@@ -16,7 +16,6 @@ call npm install --no-audit --save-dev --strict-peer-deps ^
   eslint-plugin-regexp ^
   eslint-plugin-simple-import-sort ^
   eslint-plugin-sort-destructure-keys ^
-  eslint-plugin-sort-keys-fix ^
   eslint-plugin-switch-case ^
   eslint-plugin-typescript-sort-keys ^
   eslint-plugin-unicorn ^
