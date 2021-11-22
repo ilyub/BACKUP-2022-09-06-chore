@@ -7,6 +7,7 @@ module.exports = [
   "projects-shared.update",
   "chore",
   "config",
+  "quasar-framework",
   "time-manager",
   "time-manager-api-gateway",
   "typescript-facades",
