@@ -125,7 +125,7 @@ switch ($argv[2]) {
 /**
  * Establishes SSH connection.
  */
-function connect(string $host, string $username, string $password) {
+function connect(string $host, string $username, string $password): mixed {
   $connection = ssh2_connect($host);
   ssh2_auth_password($connection, $username, $password);
 

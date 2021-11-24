@@ -9,19 +9,17 @@ init('src', 'tmp.scss', 'style');
 /**
  * Init.
  */
-function init(string $dir, string $ext, string $tag) {
+function init(string $dir, string $ext, string $tag): void {
   $regexp = '`<'.$tag.'[^<>]*+> \\s*+ (.*) </'.$tag.'[^<>]*+>`isuxDX';
-  foreach (scandir($dir) as $basename) {
-    if ($basename !== '.' && $basename !== '..') {
-      $filename = $dir.'/'.$basename;
-      if (is_dir($filename)) {
-        init($filename, $ext, $tag);
-      } elseif (pathinfo($basename, PATHINFO_EXTENSION) === 'vue') {
-        $tmp = swapExtension($filename, 'vue', $ext);
-        $contents = file_get_contents($filename);
-        if (preg_match($regexp, $contents, $matches)) {
-          file_put_contents($tmp, $matches[1]);
-        }
+  foreach (getDir($dir) as $basename) {
+    $filename = $dir.'/'.$basename;
+    if (is_dir($filename)) {
+      init($filename, $ext, $tag);
+    } elseif (pathinfo($basename, PATHINFO_EXTENSION) === 'vue') {
+      $tmp = swapExtension($filename, 'vue', $ext);
+      $contents = file_get_contents($filename);
+      if (preg_match($regexp, $contents, $matches)) {
+        file_put_contents($tmp, $matches[1]);
       }
     }
   }

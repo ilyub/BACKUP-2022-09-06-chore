@@ -5,8 +5,8 @@ include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
 $dir = dirname(dirname(dirname(__DIR__)));
 
 if (
-  file_exists($dir.DIRECTORY_SEPARATOR.'.ssh') &&
-  file_exists($dir.DIRECTORY_SEPARATOR.'chore')
+  file_exists($dir.DIRECTORY_SEPARATOR.'.npm') &&
+  file_exists($dir.DIRECTORY_SEPARATOR.'.ssh')
 ) {
   fix($dir);
 } else {
@@ -16,10 +16,8 @@ if (
 /**
  * Fixes linebreaks.
  */
-function fix(string $dir) {
+function fix(string $dir): void {
   $ignoreBasenames = [
-    '.',
-    '..',
     '.git',
     '.php_cs.cache',
     '.scannerwork',
@@ -80,7 +78,7 @@ function fix(string $dir) {
     'xml'
   ];
 
-  foreach (scandir($dir) as $basename) {
+  foreach (getDir($dir) as $basename) {
     if (in_array($basename, $ignoreBasenames)) {
       // Ignore
     } else {
