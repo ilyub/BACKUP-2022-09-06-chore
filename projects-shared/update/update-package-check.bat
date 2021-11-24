@@ -1,6 +1,6 @@
 @echo off
 echo.
-for %%p in (chore,config,eslint-plugin,time-manager,time-manager-api-gateway,typescript-facades,typescript-framework,typescript-functions,typescript-types,vscode-autofold-comments) do (
+for %%p in (chore,config,eslint-plugin,quasar-framework,time-manager,time-manager-api-gateway,typescript-facades,typescript-framework,typescript-functions,typescript-types,vscode-autofold-comments) do (
   echo ________________________________________________________________________________
   echo.
   pushd .
