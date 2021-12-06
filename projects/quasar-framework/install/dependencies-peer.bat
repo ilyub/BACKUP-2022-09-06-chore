@@ -1,11 +1,9 @@
 @echo off
 call "../../../utils/bat/typescript/install/%~n0" ^
   @quasar/quasar-app-extension-testing-unit-jest ^
-  @types/lodash ^
-  @types/lodash-es ^
+  @types/natural-compare ^
   @types/lunr ^
-  lodash ^
-  lodash-es ^
+  natural-compare ^
   lunr ^
   vue
 if not "%1" == "nopause" pause
