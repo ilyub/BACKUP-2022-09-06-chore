@@ -20,20 +20,20 @@
     "commitlint": "commitlint --edit",
     "commitlint-all": "commitlint --config commitlint-all.config.js --from=",
     "prepare": "cpy node_modules/@skylib/config/src/git-hooks/* .git/hooks",
-    "update-package-check": "ncu --dep dev,prod --reject @types/node,typescript",
-    "update-package-check-peer": "ncu --dep peer --minimal --reject @types/node,typescript",
+    "update-package-check": "ncu --dep dev,prod --reject @types/node",
+    "update-package-check-peer": "ncu --dep peer --minimal --reject @types/node",
     "update-package-check-skylib": "ncu --dep peer --filter @skylib/*",
-    "update-package-force": "ncu --dep dev,prod --reject @types/node,typescript --upgrade",
-    "update-package-force-peer": "ncu --dep peer --minimal --reject @types/node,typescript --upgrade",
+    "update-package-force": "ncu --dep dev,prod --reject @types/node --upgrade",
+    "update-package-force-peer": "ncu --dep peer --minimal --reject @types/node --upgrade",
     "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
     "@commitlint/config-conventional": "^15.0.0",
-    "@skylib/config": "^0.1.18",
+    "@skylib/config": "^0.1.19",
     "@types/node": "^15.14.0",
     "cpy-cli": "^3.1.1",
-    "npm-check-updates": "^12.0.2"
+    "npm-check-updates": "^12.0.3"
   },
   "engines": {
     "node": ">=14.0.0",
