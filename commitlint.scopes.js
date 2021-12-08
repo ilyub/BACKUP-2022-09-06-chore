@@ -8,6 +8,7 @@ module.exports = [
   "chore",
   "config",
   "quasar-framework",
+  "sonar",
   "time-manager",
   "time-manager-api-gateway",
   "typescript-facades",
