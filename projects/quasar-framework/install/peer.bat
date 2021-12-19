@@ -6,6 +6,7 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @types/lodash-es ^
   @types/lunr ^
   @types/natural-compare ^
+  @vue/test-utils ^
   lodash ^
   lodash-es ^
   lunr ^
