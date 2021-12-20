@@ -13,7 +13,11 @@
         "files.trimTrailingWhitespace": true,
         "javascript.suggestionActions.enabled": false,
         "search.exclude": {
-            "**/backup": true,
+            ".npm",
+            ".ssh",
+            ".time-manager-api-gateway",
+            "backup": true,
+            "time-manager-2": true,
             "**/dist": true,
             "**/docs": true,
             "**/es": true
