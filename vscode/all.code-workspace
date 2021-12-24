@@ -17,6 +17,7 @@
             ".ssh",
             ".time-manager-api-gateway",
             "backup": true,
+            "fix-pouchdb": true,
             "time-manager-2": true,
             "**/dist": true,
             "**/docs": true,
