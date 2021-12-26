@@ -6,7 +6,6 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   flag-icon-css ^
   lodash ^
   lodash-es ^
-  natural-compare ^
   typeface-roboto-multilang ^
   vue ^
   vue-router
