@@ -3,6 +3,7 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @mdi/js ^
   @types/lodash ^
   @types/lodash-es ^
+  date-fns ^
   flag-icon-css ^
   lodash ^
   lodash-es ^
