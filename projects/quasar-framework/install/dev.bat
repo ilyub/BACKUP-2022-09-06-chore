@@ -5,6 +5,8 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @vue/test-utils ^
   flag-icon-css ^
   typeface-roboto-multilang ^
+  vue-jest ^
   vue-router ^
-  vue-jest
+  vue-tsc
+
 if not "%1" == "nopause" pause
