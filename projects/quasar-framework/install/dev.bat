@@ -2,10 +2,9 @@
 call "../../../utils/bat/typescript/install/%~n0" ^
   @mdi/js ^
   @types/jest ^
-  @vue/test-utils ^
+  @vue/vue3-jest ^
   flag-icon-css ^
   typeface-roboto-multilang ^
-  vue-jest ^
   vue-router ^
   vue-tsc
 
