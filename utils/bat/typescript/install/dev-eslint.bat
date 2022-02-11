@@ -12,6 +12,7 @@ call npm install --no-audit --save-dev --strict-peer-deps ^
   eslint-plugin-filenames ^
   eslint-plugin-import ^
   eslint-plugin-jsdoc ^
+  eslint-plugin-no-type-assertion ^
   eslint-plugin-prettier ^
   eslint-plugin-regexp ^
   eslint-plugin-simple-import-sort ^
