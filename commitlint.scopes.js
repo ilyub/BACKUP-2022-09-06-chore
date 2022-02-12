@@ -8,7 +8,7 @@ module.exports = [
   "projects-shared",
   "projects-shared.install",
   "projects-shared.update",
-  "quasar-framework",
+  "quasar-extension",
   "sonar",
   "time-manager",
   "time-manager-api-gateway",
