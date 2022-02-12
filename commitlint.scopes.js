@@ -4,6 +4,8 @@ module.exports = [
   "eslint-plugin",
   "fix-pouchdb",
   "global",
+  "npm",
+  "npm.package-management",
   "projects",
   "projects-shared",
   "projects-shared.install",
