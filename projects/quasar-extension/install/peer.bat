@@ -7,7 +7,6 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @vue/test-utils ^
   lodash ^
   lodash-es ^
-  type-fest ^
   vue ^
   vuedraggable@next
 if not "%1" == "nopause" pause
