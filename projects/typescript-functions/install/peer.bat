@@ -11,5 +11,6 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   lodash-es ^
   reflect-metadata ^
   ts-toolbelt ^
-  tslib
+  tslib ^
+  type-fest
 if not "%1" == "nopause" pause
