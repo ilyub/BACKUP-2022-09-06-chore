@@ -11,6 +11,7 @@ call npm install --no-audit --save-dev --strict-peer-deps ^
   eslint-import-resolver-typescript ^
   eslint-plugin-boundaries ^
   eslint-plugin-es ^
+  eslint-plugin-escompat ^
   eslint-plugin-eslint-comments ^
   eslint-plugin-etc ^
   eslint-plugin-filenames ^
@@ -32,6 +33,7 @@ call npm install --no-audit --save-dev --strict-peer-deps ^
   eslint-plugin-sonarjs ^
   eslint-plugin-sort-export-all ^
   eslint-plugin-sort-destructure-keys ^
+  eslint-plugin-tsdoc ^
   eslint-plugin-typescript-sort-keys ^
   eslint-plugin-unicorn ^
   eslint-plugin-vue ^
