@@ -27,5 +27,6 @@ module.exports = [
   "utils.bat.vscode",
   "utils.php",
   "vscode",
+  "vscode.all",
   "vscode-autofold-comments"
 ];
