@@ -1,3 +1,3 @@
 @echo off
-call "../../utils/bat/typescript/%~n0" ListItem
+call "../../utils/bat/typescript/%~n0" %*
 if not "%1" == "nopause" pause
