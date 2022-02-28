@@ -5,7 +5,6 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @types/lodash ^
   @types/lodash-es ^
   date-fns ^
-  faker@5.5.3 ^
   flag-icon-css ^
   lodash ^
   lodash-es ^
