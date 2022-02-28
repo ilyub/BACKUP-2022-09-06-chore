@@ -16,6 +16,7 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   jquery ^
   lodash ^
   lodash-es ^
+  lorem-ipsum ^
   lunr ^
   minisearch ^
   natural-compare ^
