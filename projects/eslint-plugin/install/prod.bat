@@ -3,6 +3,7 @@ call "../../../utils/bat/typescript/install/%~n0" ^
   @types/estree ^
   @types/lodash ^
   @types/lodash-es ^
+  @types/minimatch ^
   lodash ^
   lodash-es ^
   minimatch ^
