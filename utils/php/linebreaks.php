@@ -20,7 +20,7 @@ function fix(string $dir): void {
   $ignoreBasenames = [
     '.git',
     '.npm',
-    '.php_cs.cache',
+    '.php-cs-fixer.cache',
     '.repro',
     '.scannerwork',
     '.ssh',
@@ -61,7 +61,6 @@ function fix(string $dir): void {
     '.gitignore',
     '.htaccess',
     '.npmignore',
-    '.php_cs',
     'artisan',
     'commit-msg',
     'post-commit',
