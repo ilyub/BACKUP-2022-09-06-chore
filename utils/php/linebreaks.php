@@ -5,8 +5,8 @@ include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
 $dir = dirname(dirname(dirname(__DIR__)));
 
 if (
-  file_exists($dir.DIRECTORY_SEPARATOR.'.npm') &&
-  file_exists($dir.DIRECTORY_SEPARATOR.'.ssh')
+  file_exists($dir.DIRECTORY_SEPARATOR.'.npm')
+  && file_exists($dir.DIRECTORY_SEPARATOR.'.ssh')
 ) {
   fix($dir);
 } else {
@@ -16,7 +16,8 @@ if (
 /**
  * Fixes linebreaks.
  */
-function fix(string $dir): void {
+function fix(string $dir): void
+{
   $ignoreBasenames = [
     '.git',
     '.npm',
@@ -38,7 +39,7 @@ function fix(string $dir): void {
     'node_modules',
     'out',
     'storage',
-    'vendor'
+    'vendor',
   ];
 
   $ignoreExts = [
@@ -46,7 +47,7 @@ function fix(string $dir): void {
     'phar',
     'png',
     'svg',
-    'vsix'
+    'vsix',
   ];
 
   $fixBasenames = [
@@ -65,7 +66,7 @@ function fix(string $dir): void {
     'commit-msg',
     'post-commit',
     'pre-commit',
-    'sonar-project.properties'
+    'sonar-project.properties',
   ];
 
   $fixExts = [
@@ -80,7 +81,7 @@ function fix(string $dir): void {
     'ts',
     'txt',
     'vue',
-    'xml'
+    'xml',
   ];
 
   foreach (getDir($dir) as $basename) {

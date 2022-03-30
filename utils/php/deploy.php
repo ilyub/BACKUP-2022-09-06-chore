@@ -48,14 +48,14 @@ switch ($argv[2]) {
       $connection,
       [
         'shopt -s dotglob',
-        'cp -R -f '.$laravelDir.'/public/* '.$wwwDir
+        'cp -R -f '.$laravelDir.'/public/* '.$wwwDir,
       ]
     );
     execute(
       $connection,
       [
         'shopt -s dotglob',
-        'cp -R -f '.$laravelDir.'/public-prod/* '.$wwwDir
+        'cp -R -f '.$laravelDir.'/public-prod/* '.$wwwDir,
       ]
     );
     break;
@@ -74,7 +74,7 @@ switch ($argv[2]) {
       [
         'ssh-keygen -R github.com',
         'ssh-keyscan -t rsa github.com >> known_hosts',
-        'chmod 0600 known_hosts'
+        'chmod 0600 known_hosts',
       ],
       $sshDir
     );
@@ -125,7 +125,8 @@ switch ($argv[2]) {
 /**
  * Establishes SSH connection.
  */
-function connect(string $host, string $username, string $password): mixed {
+function connect(string $host, string $username, string $password): mixed
+{
   $connection = ssh2_connect($host);
   ssh2_auth_password($connection, $username, $password);
 
@@ -135,7 +136,8 @@ function connect(string $host, string $username, string $password): mixed {
 /**
  * Executes SSH command.
  */
-function execute($connection, array $commands, string $laravelDir = null): void {
+function execute($connection, array $commands, string $laravelDir = null): void
+{
   if ($laravelDir !== null) {
     array_unshift($commands, 'cd '.$laravelDir);
   }
@@ -163,7 +165,8 @@ function execute($connection, array $commands, string $laravelDir = null): void 
 /**
  * Uploads file via SSH.
  */
-function upload($connection, string $src, string $dst): void {
+function upload($connection, string $src, string $dst): void
+{
   echo '> upload '.$dst.PHP_EOL.PHP_EOL;
 
   $sftp = ssh2_sftp($connection);

@@ -18,7 +18,7 @@ if ($json) {
     'low' => WHITE,
     'moderate' => YELLOW,
     'high' => RED,
-    'critical' => RED
+    'critical' => RED,
   ];
 
   $counts = $json['metadata']['vulnerabilities'];
@@ -41,7 +41,8 @@ if ($json) {
 /**
  * Adds part.
  */
-function add(string $name): void {
+function add(string $name): void
+{
   global $color, $colors, $counts, $parts;
 
   if ($counts[$name] > 0) {
