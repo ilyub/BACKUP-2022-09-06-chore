@@ -6,7 +6,7 @@ const GREEN = "\033[92m";
 const YELLOW = "\033[93m";
 const WHITE = "\033[97m";
 
-include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
+include_once __DIR__.'/api.php';
 
 $json = json_decode(stream_get_contents(STDIN), true);
 

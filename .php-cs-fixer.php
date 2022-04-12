@@ -2,7 +2,7 @@
 
 include_once 'node_modules/@skylib/config/src/php-cs-rules.php';
 
-$finder = PhpCsFixer\Finder::create()->in([__DIR__.'/utils/php']);
+$finder = PhpCsFixer\Finder::create()->in(['utils/php']);
 
 $config = new PhpCsFixer\Config();
 

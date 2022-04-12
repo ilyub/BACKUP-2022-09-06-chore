@@ -1,11 +1,11 @@
 <?php
 
-define('KEYS_DIR', dirname(dirname(dirname(__DIR__))).DIRECTORY_SEPARATOR.'.ssh');
-define('PRIVATE_DIR', dirname(dirname(dirname(__DIR__))).DIRECTORY_SEPARATOR.'.'.$argv[1]);
-define('PROJECT_DIR', dirname(dirname(dirname(__DIR__))).DIRECTORY_SEPARATOR.$argv[1]);
+define('KEYS_DIR', dirname(dirname(dirname(__DIR__))).'/.ssh');
+define('PRIVATE_DIR', dirname(dirname(dirname(__DIR__))).'/.'.$argv[1]);
+define('PROJECT_DIR', dirname(dirname(dirname(__DIR__))).'/'.$argv[1]);
 
-include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
-include_once PRIVATE_DIR.DIRECTORY_SEPARATOR.'config.php';
+include_once __DIR__.'/api.php';
+include_once PRIVATE_DIR.'/config.php';
 
 echo PHP_EOL;
 
@@ -98,7 +98,7 @@ switch ($argv[2]) {
   case 'upload-composer':
     upload(
       $connection,
-      PRIVATE_DIR.DIRECTORY_SEPARATOR.'composer.phar',
+      PRIVATE_DIR.'/composer.phar',
       $laravelDir.'/composer.phar'
     );
     break;
@@ -106,14 +106,14 @@ switch ($argv[2]) {
   case 'upload-env':
     upload(
       $connection,
-      PRIVATE_DIR.DIRECTORY_SEPARATOR.'.env',
+      PRIVATE_DIR.'/.env',
       $laravelDir.'/.env');
     break;
 
   case 'upload-ssh-key':
     upload(
       $connection,
-      KEYS_DIR.DIRECTORY_SEPARATOR.'id_rsa',
+      KEYS_DIR.'/id_rsa',
       $sshDir.'/id_rsa'
     );
     break;

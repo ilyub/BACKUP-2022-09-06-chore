@@ -1,12 +1,12 @@
 <?php
 
-include_once __DIR__.DIRECTORY_SEPARATOR.'api.php';
+include_once __DIR__.'/api.php';
 
 $dir = dirname(dirname(dirname(__DIR__)));
 
 if (
-  file_exists($dir.DIRECTORY_SEPARATOR.'.npm')
-  && file_exists($dir.DIRECTORY_SEPARATOR.'.ssh')
+  file_exists($dir.'/.npm')
+  && file_exists($dir.'/.ssh')
 ) {
   fix($dir);
 } else {
@@ -88,7 +88,7 @@ function fix(string $dir): void
     if (in_array($basename, $ignoreBasenames)) {
       // Ignore
     } else {
-      $filename = $dir.DIRECTORY_SEPARATOR.$basename;
+      $filename = $dir.'/'.$basename;
       if (is_dir($filename)) {
         fix($filename);
       } else {

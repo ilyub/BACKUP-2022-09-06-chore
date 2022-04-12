@@ -9,12 +9,12 @@ function clearDir(string $dir, array $ignore = [], $exists = false): void
 {
   if ($exists || file_exists($dir)) {
     foreach (getDir($dir, $ignore) as $basename) {
-      $filename = $dir.DIRECTORY_SEPARATOR.$basename;
+      $filename = $dir.'/'.$basename;
       if (is_dir($filename)) {
         clearDir($filename, [], true);
         rmdir($filename);
       } else {
-        unlink($dir.DIRECTORY_SEPARATOR.$basename);
+        unlink($dir.'/'.$basename);
       }
     }
   }
