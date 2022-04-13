@@ -5,6 +5,7 @@ define('PRIVATE_DIR', dirname(dirname(dirname(__DIR__))).'/.'.$argv[1]);
 define('PROJECT_DIR', dirname(dirname(dirname(__DIR__))).'/'.$argv[1]);
 
 include_once __DIR__.'/api.php';
+
 include_once PRIVATE_DIR.'/config.php';
 
 echo PHP_EOL;
@@ -18,6 +19,7 @@ switch ($argv[2]) {
       [$php.' artisan migrate'],
       $laravelDir
     );
+
     break;
 
   case 'artisan-seed':
@@ -26,6 +28,7 @@ switch ($argv[2]) {
       [$php.' artisan db:seed --class='.$argv[3]],
       $laravelDir
     );
+
     break;
 
   case 'checkout':
@@ -34,6 +37,7 @@ switch ($argv[2]) {
       [$git.' checkout '.$argv[3]],
       $laravelDir
     );
+
     break;
 
   case 'clone':
@@ -41,6 +45,7 @@ switch ($argv[2]) {
       $connection,
       [$git.' clone '.$repo.' '.$laravelDir]
     );
+
     break;
 
   case 'copy-public':
@@ -58,6 +63,7 @@ switch ($argv[2]) {
         'cp -R -f '.$laravelDir.'/public-prod/* '.$wwwDir,
       ]
     );
+
     break;
 
   case 'composer-install':
@@ -66,6 +72,7 @@ switch ($argv[2]) {
       [$php.' composer.phar install --optimize-autoloader'],
       $laravelDir
     );
+
     break;
 
   case 'known-hosts':
@@ -78,6 +85,7 @@ switch ($argv[2]) {
       ],
       $sshDir
     );
+
     break;
 
   case 'pull':
@@ -86,6 +94,7 @@ switch ($argv[2]) {
       [$git.' pull'],
       $laravelDir
     );
+
     break;
 
   case 'reset':
@@ -93,6 +102,7 @@ switch ($argv[2]) {
       $connection,
       ['rm -f -r '.$laravelDir]
     );
+
     break;
 
   case 'upload-composer':
@@ -101,13 +111,16 @@ switch ($argv[2]) {
       PRIVATE_DIR.'/composer.phar',
       $laravelDir.'/composer.phar'
     );
+
     break;
 
   case 'upload-env':
     upload(
       $connection,
       PRIVATE_DIR.'/.env',
-      $laravelDir.'/.env');
+      $laravelDir.'/.env'
+    );
+
     break;
 
   case 'upload-ssh-key':
@@ -116,6 +129,7 @@ switch ($argv[2]) {
       KEYS_DIR.'/id_rsa',
       $sshDir.'/id_rsa'
     );
+
     break;
 
   default:
