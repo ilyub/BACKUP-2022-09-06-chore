@@ -1,0 +1,28 @@
+{
+    "folders": [
+        {
+            "path": "..\\..\\fix-pouchdb"
+        }
+    ],
+    "settings": {
+        "editor.detectIndentation": false,
+        "editor.foldingStrategy": "indentation",
+        "editor.tabSize": 2,
+        "files.eol": "\n",
+        "files.insertFinalNewline": true,
+        "files.trimTrailingWhitespace": true,
+        "javascript.suggestionActions.enabled": false,
+        "search.exclude": {
+            "dist": true,
+            "docs": true,
+            "es": true
+        },
+        "typescript.suggestionActions.enabled": false,
+        "typescript.tsdk": "node_modules\\typescript\\lib",
+        "vetur.format.defaultFormatter.html": "prettier",
+        "workbench.colorCustomizations": {
+            "editor.foldBackground": "#fff"
+        },
+        "workbench.tree.indent": 30
+    }
+}
