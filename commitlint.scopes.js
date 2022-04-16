@@ -4,6 +4,7 @@ module.exports = [
   "eslint-plugin",
   "fix-pouchdb",
   "global",
+  "lodash-commonjs-es",
   "npm",
   "npm.package-management",
   "projects",
