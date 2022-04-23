@@ -30,7 +30,7 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.3",
     "@commitlint/config-conventional": "^16.2.1",
-    "@skylib/config": "^1.6.0",
+    "@skylib/config": "^1.7.2",
     "@types/node": "^15.14.0",
     "cpy-cli": "^4.1.0",
     "npm-check-updates": "^12.5.9"
