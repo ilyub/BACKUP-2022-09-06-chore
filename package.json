@@ -14,7 +14,7 @@
     "type": "git",
     "url": "git://github.com/ilyub/chore.git"
   },
-  "author": "Ilya Lyubinskiy <admin.phpdev@gmail.com> (https://github.com/ilyub)",
+  "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",
   "publisher": "ilyub",
   "scripts": {
     "commitlint": "commitlint --edit",
