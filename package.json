@@ -28,12 +28,12 @@
     "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.2.4",
-    "@commitlint/config-conventional": "^16.2.4",
-    "@skylib/config": "^1.11.1",
-    "@types/node": "^15.14.0",
+    "@commitlint/cli": "^17.0.2",
+    "@commitlint/config-conventional": "^17.0.2",
+    "@skylib/config": "^1.15.0",
+    "@types/node": "^18.0.0",
     "cpy-cli": "^4.1.0",
-    "npm-check-updates": "^12.5.11"
+    "npm-check-updates": "^13.1.5"
   },
   "engines": {
     "node": ">=14.0.0",
