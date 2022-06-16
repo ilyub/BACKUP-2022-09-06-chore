@@ -3,6 +3,4 @@ cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
 call npm run update-package-check
-call npm run update-package-check-peer
-call npm run update-package-check-skylib
 popd

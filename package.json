@@ -20,12 +20,8 @@
     "commitlint": "commitlint --edit",
     "commitlint-all": "commitlint --config commitlint-all.config.js --from=",
     "prepare": "cpy node_modules/@skylib/config/src/git-hooks/* .git/hooks",
-    "update-package-check": "ncu --dep dev,prod",
-    "update-package-check-peer": "ncu --dep peer --minimal",
-    "update-package-check-skylib": "ncu --dep peer --filter @skylib/*",
-    "update-package-force": "ncu --dep dev,prod --upgrade",
-    "update-package-force-peer": "ncu --dep peer --minimal --upgrade",
-    "update-package-force-skylib": "ncu --dep peer --filter @skylib/* --upgrade"
+    "update-package-check": "ncu --dep dev,peer,prod",
+    "update-package-force": "ncu --dep dev,peer,prod --upgrade"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
@@ -33,7 +29,7 @@
     "@skylib/config": "^1.15.0",
     "@types/node": "^18.0.0",
     "cpy-cli": "^4.1.0",
-    "npm-check-updates": "^13.1.5"
+    "npm-check-updates": "^14.0.1"
   },
   "engines": {
     "node": ">=14.0.0",
