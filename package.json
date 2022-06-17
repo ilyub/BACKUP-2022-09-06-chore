@@ -14,25 +14,68 @@
     "type": "git",
     "url": "git://github.com/ilyub/chore.git"
   },
+  "license": "You may not use this package",
   "author": "Ilia Liubinskii <admin.phpdev@gmail.com> (https://github.com/ilyub)",
   "publisher": "ilyub",
+  "files": [],
   "scripts": {
+    "add-tags": "php node_modules/@skylib/config/src/utils/add-tags.php",
+    "audit": "npm audit",
+    "browserslist": "echo Skip browserslist",
+    "build": "echo Skip build",
+    "build-doc": "echo Skip build-doc",
+    "build-es": "echo Skip build-es",
+    "clean-install": "npm clean-install --no-audit --strict-peer-deps",
+    "clear-cache": "cf cache node_modules/.cache",
+    "commit-msg": "npm run commitlint",
     "commitlint": "commitlint --edit",
     "commitlint-all": "commitlint --config commitlint-all.config.js --from=",
-    "prepare": "cpy node_modules/@skylib/config/src/git-hooks/* .git/hooks",
+    "compile": "echo Skip compile",
+    "config-lint": "node node_modules/@skylib/config/src/utils/config-lint.js",
+    "delete-tags": "php node_modules/@skylib/config/src/utils/delete-tags.php",
+    "full-check": "php node_modules/@skylib/config/src/utils/full-check.php",
+    "install-deps": "npm install --no-audit --strict-peer-deps",
+    "lint": "echo Skip lint",
+    "lint-fast": "echo Skip lint-fast",
+    "lint-no-fix": "echo Skip lint-no-fix",
+    "package-json-lint": "npmPkgJsonLint .",
+    "php-cs-fixer": "echo Skip php-cs-fixer",
+    "post-commit": "php node_modules/@skylib/config/src/utils/post-commit.php",
+    "pre-commit": "php node_modules/@skylib/config/src/utils/pre-commit.php",
+    "prepare": "husky install node_modules/@skylib/config/src/git-hooks",
+    "publish": "publish-if-not-exists",
+    "regenerate-lock-file": "npm install --no-audit --package-lock-only --strict-peer-deps",
+    "serve": "echo Skip serve",
+    "sonar": "echo Skip sonar",
+    "stylelint": "echo Skip stylelint",
+    "stylelint-html": "echo Skip stylelint-html",
+    "stylelint-html-no-fix": "echo Skip stylelint-html-no-fix",
+    "stylelint-no-fix": "echo Skip stylelint-no-fix",
+    "test": "echo Skip test",
+    "test-fast": "echo Skip test-fast",
+    "tsc": "echo Skip tsc",
+    "update": "npm update --no-audit --strict-peer-deps",
     "update-package-check": "ncu --dep dev,peer,prod",
-    "update-package-force": "ncu --dep dev,peer,prod --upgrade"
+    "update-package-force": "ncu --dep dev,peer,prod --upgrade",
+    "upgrade": "npm run update-package-force & npm run install-deps",
+    "vue-tsc": "echo Skip vue-tsc"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-conventional": "^17.0.2",
-    "@skylib/config": "^1.15.0",
+    "@skylib/config": "^3.0.1",
     "@types/node": "^18.0.0",
     "cpy-cli": "^4.1.0",
-    "npm-check-updates": "^14.0.1"
+    "npm-check-updates": "^14.0.2"
   },
   "engines": {
     "node": ">=14.0.0",
     "npm": ">=7.0.0"
+  },
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "overrides": {
+    "package-json": "8.1.0"
   }
 }
