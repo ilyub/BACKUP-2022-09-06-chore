@@ -1,28 +1,56 @@
 {
-    "folders": [
-        {
-            "path": ".."
-        }
-    ],
-    "settings": {
-        "editor.detectIndentation": false,
-        "editor.foldingStrategy": "indentation",
-        "editor.tabSize": 2,
-        "files.eol": "\n",
-        "files.insertFinalNewline": true,
-        "files.trimTrailingWhitespace": true,
-        "javascript.suggestionActions.enabled": false,
-        "search.exclude": {
-            "dist": true,
-            "docs": true,
-            "es": true
-        },
-        "typescript.suggestionActions.enabled": false,
-        "typescript.tsdk": "node_modules\\typescript\\lib",
-        "vetur.format.defaultFormatter.html": "prettier",
-        "workbench.colorCustomizations": {
-            "editor.foldBackground": "#fff"
-        },
-        "workbench.tree.indent": 30
+  "folders": [
+    {
+      "path": ".."
     }
+  ],
+  "settings": {
+    "[json]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[jsonc]": {
+      "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "[php]": {
+      "editor.defaultFormatter": "junstyle.php-cs-fixer"
+    },
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true
+    },
+    "editor.detectIndentation": false,
+    "editor.foldingStrategy": "indentation",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "editor.unicodeHighlight.ambiguousCharacters": true,
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.suggestionActions.enabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "search.exclude": {
+      "dist": true,
+      "docs": true,
+      "es": true
+    },
+    "sortJSON.contextMenu": {
+      "sortJSONAlphaNum": false,
+      "sortJSONAlphaNumReverse": false,
+      "sortJSONKeyLength": false,
+      "sortJSONKeyLengthReverse": false,
+      "sortJSONReverse": false,
+      "sortJSONType": false,
+      "sortJSONTypeReverse": false,
+      "sortJSONValues": false,
+      "sortJSONValuesReverse": false
+    },
+    "typescript.suggestionActions.enabled": false,
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "volar.codeLens.references": false,
+    "workbench.colorCustomizations": {
+      "editor.foldBackground": "#fff"
+    },
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 30
+  }
 }
