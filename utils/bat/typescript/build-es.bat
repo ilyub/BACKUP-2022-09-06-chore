@@ -1,5 +1,5 @@
 pushd .
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-call npm run build-es
+call npm run build-es --if-present
 popd

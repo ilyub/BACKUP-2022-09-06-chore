@@ -1,6 +1,6 @@
 pushd .
+cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-set TIMING=1
-call npm run lint
+call npm run npm:regenerate-lock-file --if-present
 popd

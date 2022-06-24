@@ -1,5 +1,5 @@
 pushd .
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-call npm run lint-no-fix
+call npm run lint-no-fix --if-present
 popd

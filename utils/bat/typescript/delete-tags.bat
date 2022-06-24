@@ -1,5 +1,5 @@
 pushd .
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-php .git/hooks/delete-tags.php
+call npm run delete-tags --if-present
 popd

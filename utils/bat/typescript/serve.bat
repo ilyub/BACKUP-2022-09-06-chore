@@ -1,5 +1,5 @@
 pushd .
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-call sonar-scanner
+call npm run serve --if-present
 popd

@@ -1,6 +1,5 @@
 pushd .
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-set TIMING=1
-call npm run lint-fast
+start npm run serve --if-present
 popd

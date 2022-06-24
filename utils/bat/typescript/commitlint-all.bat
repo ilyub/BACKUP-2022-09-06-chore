@@ -1,5 +1,5 @@
 pushd .
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-call npm run commitlint-all
+call npm run commitlint-all --if-present
 popd

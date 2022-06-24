@@ -1,5 +1,6 @@
 pushd .
+cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-call npm publish --access=public
+call npm run npm:clean-install --if-present
 popd

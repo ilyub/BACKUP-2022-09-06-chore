@@ -1,5 +1,6 @@
 pushd .
+cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-start npm run serve
+call npm run upgrade --if-present
 popd

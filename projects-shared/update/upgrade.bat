@@ -4,12 +4,12 @@ for %%p in (chore,config,eslint-plugin,lodash-commonjs-es,quasar-extension,time-
   echo ________________________________________________________________________________
   echo.
   pushd .
-  cd ../../projects/%%p/install
+  cd ../../projects/%%p/upgrade
   if exist "%~n0.bat" (
-    echo Run %%p/install/%~n0
+    echo Run %%p/upgrade/%~n0
     call "%~n0" nopause
   ) else (
-    echo Skip %%p/install/%~n0
+    echo Skip %%p/upgrade/%~n0
   )
   popd
 )

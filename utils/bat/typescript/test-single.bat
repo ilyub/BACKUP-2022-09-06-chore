@@ -6,5 +6,5 @@ if "%1" == "" (
   pause
   exit
 )
-call npm test -t %1
+call npm run test --if-present -t %1
 popd

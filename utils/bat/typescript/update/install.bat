@@ -2,5 +2,5 @@ pushd .
 cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-call npm install --no-audit --strict-peer-deps
+call npm run npm:install --if-present
 popd
