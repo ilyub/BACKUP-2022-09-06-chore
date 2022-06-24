@@ -9,7 +9,9 @@ if (
   && file_exists($dir.'/.ssh')
 ) {
   report($dir);
-} else {
+}
+else
+{
   throw new Exception('Invalid directory: '.$dir);
 }
 
@@ -20,15 +22,18 @@ function report(string $dir): void
 {
   $empty = true;
 
-  foreach (getDir($dir, ['.git', 'cache', 'node_modules', 'vendor']) as $basename) {
+  foreach (getDir($dir, ['.git', 'cache', 'node_modules', 'vendor']) as $basename)
+  {
     $empty = false;
     $filename = $dir.'/'.$basename;
-    if (is_dir($filename)) {
+    if (is_dir($filename))
+    {
       report($filename);
     }
   }
 
-  if ($empty) {
+  if ($empty)
+  {
     echo $dir.PHP_EOL;
   }
 }

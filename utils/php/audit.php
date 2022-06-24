@@ -10,7 +10,8 @@ include_once __DIR__.'/api.php';
 
 $json = json_decode(stream_get_contents(STDIN), true);
 
-if ($json) {
+if ($json)
+{
   $color = RESET;
 
   $colors = [
@@ -23,7 +24,8 @@ if ($json) {
 
   $counts = $json['metadata']['vulnerabilities'];
 
-  if ($counts['total'] > 0) {
+  if ($counts['total'] > 0)
+  {
     $parts = [];
 
     add('info');
@@ -33,7 +35,9 @@ if ($json) {
     add('critical');
 
     echo $color.$counts['total'].RESET.' vulnerabilities ('.implode(', ', $parts).')'.PHP_EOL;
-  } else {
+  }
+  else
+  {
     echo 'found '.GREEN.'0'.RESET.' vulnerabilities'.PHP_EOL;
   }
 }
@@ -45,7 +49,8 @@ function add(string $name): void
 {
   global $color, $colors, $counts, $parts;
 
-  if ($counts[$name] > 0) {
+  if ($counts[$name] > 0)
+  {
     $color = $colors[$name];
     $parts[$name] = $colors[$name].$counts[$name].RESET.' '.$name;
   }

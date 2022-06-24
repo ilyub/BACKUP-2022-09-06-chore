@@ -152,7 +152,8 @@ function connect(string $host, string $username, string $password): mixed
  */
 function execute($connection, array $commands, string $laravelDir = null): void
 {
-  if ($laravelDir !== null) {
+  if ($laravelDir !== null)
+  {
     array_unshift($commands, 'cd '.$laravelDir);
   }
   $commands = implode('; ', $commands);
@@ -166,12 +167,14 @@ function execute($connection, array $commands, string $laravelDir = null): void
   stream_set_blocking($err, true);
 
   $outStr = trim(stream_get_contents($out));
-  if (strlen($outStr) > 0) {
+  if (strlen($outStr) > 0)
+  {
     echo 'Out'.PHP_EOL.$outStr.PHP_EOL.PHP_EOL;
   }
 
   $errStr = trim(stream_get_contents($err));
-  if (strlen($errStr) > 0) {
+  if (strlen($errStr) > 0)
+  {
     echo 'Err'.PHP_EOL.$errStr.PHP_EOL.PHP_EOL;
   }
 }

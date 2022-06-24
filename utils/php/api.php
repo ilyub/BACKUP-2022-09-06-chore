@@ -7,13 +7,18 @@ set_error_handler('errorHandler');
  */
 function clearDir(string $dir, array $ignore = [], $exists = false): void
 {
-  if ($exists || file_exists($dir)) {
-    foreach (getDir($dir, $ignore) as $basename) {
+  if ($exists || file_exists($dir))
+  {
+    foreach (getDir($dir, $ignore) as $basename)
+    {
       $filename = $dir.'/'.$basename;
-      if (is_dir($filename)) {
+      if (is_dir($filename))
+      {
         clearDir($filename, [], true);
         rmdir($filename);
-      } else {
+      }
+      else
+      {
         unlink($dir.'/'.$basename);
       }
     }
