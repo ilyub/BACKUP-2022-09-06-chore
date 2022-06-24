@@ -9,7 +9,9 @@ if (
   && file_exists($dir.'/.ssh')
 ) {
   fix($dir);
-} else {
+}
+else
+{
   throw new Exception('Invalid directory: '.$dir);
 }
 
@@ -61,6 +63,7 @@ function fix(string $dir): void
     '.eslintignore',
     '.gitignore',
     '.htaccess',
+    '.husky',
     '.npmignore',
     'artisan',
     'commit-msg',
@@ -78,28 +81,42 @@ function fix(string $dir): void
     'md',
     'php',
     'scss',
+    'sh',
     'ts',
     'txt',
     'vue',
     'xml',
+    'yml',
   ];
 
-  foreach (getDir($dir) as $basename) {
-    if (in_array($basename, $ignoreBasenames)) {
+  foreach (getDir($dir) as $basename)
+  {
+    if (in_array($basename, $ignoreBasenames))
+    {
       // Ignore
-    } else {
+    }
+    else
+    {
       $filename = $dir.'/'.$basename;
-      if (is_dir($filename)) {
+      if (is_dir($filename))
+      {
         fix($filename);
-      } else {
+      }
+      else
+      {
         $ext = pathinfo($basename, PATHINFO_EXTENSION);
-        if (in_array($ext, $ignoreExts)) {
+        if (in_array($ext, $ignoreExts))
+        {
           // Ignore
-        } elseif (in_array($basename, $fixBasenames) || in_array($ext, $fixExts)) {
+        }
+        elseif (in_array($basename, $fixBasenames) || in_array($ext, $fixExts))
+        {
           $contents = file_get_contents($filename);
           $contents = str_replace("\r\n", "\n", $contents);
           file_put_contents($filename, $contents);
-        } else {
+        }
+        else
+        {
           echo 'Unexpected: '.$filename.PHP_EOL;
         }
       }
