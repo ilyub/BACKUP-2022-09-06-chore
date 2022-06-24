@@ -22,6 +22,7 @@
     "editor.formatOnSave": true,
     "editor.tabSize": 2,
     "editor.unicodeHighlight.ambiguousCharacters": true,
+    "eslint.format.enable": true,
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
@@ -33,6 +34,9 @@
       ".ssh": true,
       "backup": true,
       "time-manager-2": true,
+      "**/dist/**": true,
+      "**/docs/**": true,
+      "**/es/**": true,
       "**/package-lock.json": true
     },
     "sortJSON.contextMenu": {
