@@ -1,2 +1,2 @@
 @echo off
-tsc
+package-json-lint
