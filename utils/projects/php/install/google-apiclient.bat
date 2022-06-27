@@ -1,5 +1,5 @@
 cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-composer require google/apiclient
+call composer require google/apiclient
 pause

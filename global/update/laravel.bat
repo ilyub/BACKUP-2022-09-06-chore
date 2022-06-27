@@ -1,3 +1,3 @@
 @echo off
-composer global update laravel/installer
+call composer global update laravel/installer
 pause

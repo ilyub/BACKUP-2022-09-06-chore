@@ -1,5 +1,5 @@
 cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%project%
-composer require laravel/socialite
+call composer require laravel/socialite
 pause

@@ -1,3 +1,3 @@
 @echo off
-composer global require laravel/installer
+call composer global require laravel/installer
 pause

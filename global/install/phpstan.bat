@@ -1,3 +1,3 @@
 @echo off
-composer global require phpstan/phpstan
+call composer global require phpstan/phpstan
 pause

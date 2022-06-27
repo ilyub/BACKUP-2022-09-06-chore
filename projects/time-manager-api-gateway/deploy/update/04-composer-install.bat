@@ -1,2 +1,2 @@
 @echo off
-composer-install
+call composer-install

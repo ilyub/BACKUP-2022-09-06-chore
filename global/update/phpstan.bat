@@ -1,3 +1,3 @@
 @echo off
-composer global update phpstan/phpstan
+call composer global update phpstan/phpstan
 pause
