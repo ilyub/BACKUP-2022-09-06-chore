@@ -32,12 +32,14 @@
       ".npm": true,
       ".repro": true,
       ".ssh": true,
+      ".time-manager-api-gateway": true,
       "backup": true,
       "time-manager-2": true,
+      "**/composer.lock": true,
+      "**/package-lock.json": true,
       "**/dist/**": true,
       "**/docs/**": true,
-      "**/es/**": true,
-      "**/package-lock.json": true
+      "**/es/**": true
     },
     "sortJSON.contextMenu": {
       "sortJSONAlphaNum": false,

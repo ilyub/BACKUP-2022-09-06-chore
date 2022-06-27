@@ -1,0 +1,3 @@
+cd ../../../..
+yo code
+pause

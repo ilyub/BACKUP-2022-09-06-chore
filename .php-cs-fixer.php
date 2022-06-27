@@ -1,8 +1,8 @@
 <?php
 
-include_once 'node_modules/@skylib/config/src/php-cs-config.php';
+include_once __DIR__.'/node_modules/@skylib/config/src/php-cs-config.php';
 
-$finder = PhpCsFixer\Finder::create()->in([__DIR__.'/utils/php']);
+$finder = PhpCsFixer\Finder::create()->in([__DIR__.'/utils']);
 
 $config = new PhpCsFixer\Config();
 

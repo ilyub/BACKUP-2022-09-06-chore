@@ -4,5 +4,5 @@ if "%1" == "" (
   pause
   exit
 )
-call npm deprecate %1 "This version is no longer supported"
+call npm deprecate %1 "Deprecated"
 pause

@@ -1,3 +1,3 @@
 @echo off
-call npm-windows-upgrade
+npm-windows-upgrade
 pause

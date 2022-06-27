@@ -6,14 +6,12 @@ const GREEN = "\033[92m";
 const YELLOW = "\033[93m";
 const WHITE = "\033[97m";
 
-include_once __DIR__.'/api.php';
+include_once __DIR__.'/api/init.php';
 
 $json = json_decode(stream_get_contents(STDIN), true);
 
 if ($json)
 {
-  $color = RESET;
-
   $colors = [
     'info' => RESET,
     'low' => WHITE,
@@ -22,36 +20,27 @@ if ($json)
     'critical' => RED,
   ];
 
+  $lastColor = RESET;
+
   $counts = $json['metadata']['vulnerabilities'];
 
   if ($counts['total'] > 0)
   {
-    $parts = [];
+    $descriptions = [];
 
-    add('info');
-    add('low');
-    add('moderate');
-    add('high');
-    add('critical');
+    foreach ($colors as $name => $color)
+    {
+      if ($counts[$name] > 0)
+      {
+        $lastColor = $colors[$name];
+        $descriptions[$name] = $colors[$name].$counts[$name].RESET.' '.$name;
+      }
+    }
 
-    echo $color.$counts['total'].RESET.' vulnerabilities ('.implode(', ', $parts).')'.PHP_EOL;
+    echo $lastColor.$counts['total'].RESET.' vulnerabilities ('.implode(', ', $descriptions).')'.PHP_EOL;
   }
   else
   {
-    echo 'found '.GREEN.'0'.RESET.' vulnerabilities'.PHP_EOL;
-  }
-}
-
-/**
- * Adds part.
- */
-function add(string $name): void
-{
-  global $color, $colors, $counts, $parts;
-
-  if ($counts[$name] > 0)
-  {
-    $color = $colors[$name];
-    $parts[$name] = $colors[$name].$counts[$name].RESET.' '.$name;
+    echo 'Found '.GREEN.'0'.RESET.' vulnerabilities'.PHP_EOL;
   }
 }

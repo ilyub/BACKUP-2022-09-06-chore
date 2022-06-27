@@ -1,6 +1,6 @@
 <?php
 
-include_once __DIR__.'/api.php';
+include_once __DIR__.'/api/init.php';
 
 $json = json_decode(stream_get_contents(STDIN), true);
 

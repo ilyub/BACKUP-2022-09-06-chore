@@ -1,2 +1,4 @@
 @echo off
-call "../../utils/bat/vue/%~n0" %*
+for %%p in ("%cd%") do set project=%%~np
+cd ../../../%project%
+start npm run serve
