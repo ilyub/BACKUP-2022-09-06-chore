@@ -28,6 +28,7 @@
     "files.trimTrailingWhitespace": true,
     "javascript.suggestionActions.enabled": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
+    "phpstan.path": "D:/Programs/PHPStan/phpstan.phar",
     "search.exclude": {
       ".npm": true,
       ".repro": true,
