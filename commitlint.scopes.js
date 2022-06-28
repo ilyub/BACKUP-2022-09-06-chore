@@ -9,7 +9,7 @@ module.exports = {
     "./utils",
     "./vscode"
   ],
-  scopes:[
+  scopes: [
     "global",
     "node",
     "npm",

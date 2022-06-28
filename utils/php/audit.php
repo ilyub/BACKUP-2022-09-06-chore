@@ -1,5 +1,8 @@
 <?php
 
+use Skylib\Config\Assert;
+use Skylib\Config\Unknown;
+
 const RESET = "\033[0m";
 const RED = "\033[91m";
 const GREEN = "\033[92m";
@@ -8,39 +11,40 @@ const WHITE = "\033[97m";
 
 include_once __DIR__.'/api/init.php';
 
-$json = json_decode(stream_get_contents(STDIN), true);
+$str = Assert::string(stream_get_contents(STDIN));
 
-if ($json)
+$json = Unknown\Assert::array(json_decode($str, true));
+
+$metadata = Unknown\Assert::array($json['metadata']);
+
+$vulnerabilities = Unknown\Assert::array($metadata['vulnerabilities']);
+
+$colors = [
+  'info' => RESET,
+  'low' => WHITE,
+  'moderate' => YELLOW,
+  'high' => RED,
+  'critical' => RED,
+];
+
+$lastColor = RESET;
+
+if ($vulnerabilities['total'] > 0)
 {
-  $colors = [
-    'info' => RESET,
-    'low' => WHITE,
-    'moderate' => YELLOW,
-    'high' => RED,
-    'critical' => RED,
-  ];
+  $descriptions = [];
 
-  $lastColor = RESET;
-
-  $counts = $json['metadata']['vulnerabilities'];
-
-  if ($counts['total'] > 0)
+  foreach ($colors as $name => $color)
   {
-    $descriptions = [];
-
-    foreach ($colors as $name => $color)
+    if ($vulnerabilities[$name] > 0)
     {
-      if ($counts[$name] > 0)
-      {
-        $lastColor = $colors[$name];
-        $descriptions[$name] = $colors[$name].$counts[$name].RESET.' '.$name;
-      }
+      $lastColor = $colors[$name];
+      $descriptions[$name] = $colors[$name].$vulnerabilities[$name].RESET.' '.$name;
     }
+  }
 
-    echo $lastColor.$counts['total'].RESET.' vulnerabilities ('.implode(', ', $descriptions).')'.PHP_EOL;
-  }
-  else
-  {
-    echo 'Found '.GREEN.'0'.RESET.' vulnerabilities'.PHP_EOL;
-  }
+  echo $lastColor.$vulnerabilities['total'].RESET.' vulnerabilities ('.implode(', ', $descriptions).')'.PHP_EOL;
+}
+else
+{
+  echo 'Found '.GREEN.'0'.RESET.' vulnerabilities'.PHP_EOL;
 }

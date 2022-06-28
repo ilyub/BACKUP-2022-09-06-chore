@@ -4,4 +4,4 @@ parameters:
   paths:
     - utils
   scanDirectories:
-    - node_modules/@skylib/config/src/php
+    - node_modules/@skylib/config/api

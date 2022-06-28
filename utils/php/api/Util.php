@@ -2,17 +2,18 @@
 
 class Util
 {
-  public static function rootDir()
+  /**
+   * Checks directory.
+   */
+  public static function rootDir(string $dir): void
   {
-    define('ROOT_DIR', dirname(dirname(dirname(dirname(__DIR__)))));
-
-    if (file_exists(ROOT_DIR.'/.npm') && file_exists(ROOT_DIR.'/.ssh'))
+    if (file_exists($dir.'/.npm') && file_exists($dir.'/.ssh'))
     {
       // In root dir
     }
     else
     {
-      throw new Exception('Not in root dir: '.ROOT_DIR);
+      throw new Exception('Not in root dir: '.$dir);
     }
   }
 }
