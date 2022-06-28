@@ -1,15 +1,5 @@
 <?php
 
-use Skylib\Config\Assert;
-use Skylib\Config\Unknown;
+include_once __DIR__.'/init.php';
 
-include_once __DIR__.'/api/init.php';
-
-$str = Assert::string(stream_get_contents(STDIN));
-
-$json = Unknown\Assert::array(json_decode($str, true));
-
-echo 'Added: '.$json['added'].PHP_EOL;
-echo 'Removed: '.$json['removed'].PHP_EOL;
-echo 'Changed: '.$json['changed'].PHP_EOL;
-echo 'Audited: '.$json['audited'].PHP_EOL;
+Actions\AuditFix::do();

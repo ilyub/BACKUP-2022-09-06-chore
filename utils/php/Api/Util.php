@@ -1,5 +1,9 @@
 <?php
 
+namespace Api;
+
+use Skylib\Config\BaseException;
+
 class Util
 {
   /**
@@ -13,7 +17,7 @@ class Util
     }
     else
     {
-      throw new Exception('Not in root dir: '.$dir);
+      throw new BaseException('Not in root dir: '.$dir);
     }
   }
 }
