@@ -26,9 +26,12 @@
     "files.eol": "\n",
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "intelephense.files.exclude": [
+      "**/{.DS_Store,.git,.hg,.history,.svn,CVS,bower_components}/**",
+      "**/vendor/**/{Tests,tests,vendor}/**"
+    ],
     "javascript.suggestionActions.enabled": false,
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "phpstan.path": "D:/Programs/PHPStan/phpstan.phar",
     "search.exclude": {
       "dist": true,
       "docs": true,
