@@ -1,4 +1,7 @@
+includes:
+  - node_modules/@skylib/config/src/phpstan.neon
 parameters:
-  level: max
   paths:
     - utils
+  scanDirectories:
+    - node_modules/@skylib/config/src/php
