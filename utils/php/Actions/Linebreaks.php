@@ -96,6 +96,7 @@ class Linebreaks
     '.php-cs-fixer.cache',
     '.scannerwork',
     '.ssh',
+    'backup',
     'cache',
     'composer.lock',
     'coverage',

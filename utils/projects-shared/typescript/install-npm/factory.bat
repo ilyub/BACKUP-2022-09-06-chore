@@ -1,3 +1,4 @@
+@echo off
 echo.
 cd ../../../../%1
 for %%d in (

@@ -1,1 +1,2 @@
-%~p0factory typescript-facades @skylib/facades peer
+@echo off
+start %~p0factory typescript-facades @skylib/facades peer

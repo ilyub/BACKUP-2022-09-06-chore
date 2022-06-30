@@ -4,7 +4,7 @@ namespace Actions;
 
 use Skylib\Config\Assert;
 
-class EmptyDirs
+class BatFiles
 {
   /**
    * Reports empty dirs.
@@ -13,11 +13,6 @@ class EmptyDirs
   {
     $basenames = array_diff(Assert::strings(scandir($dir)), static::$ignoreBasenames);
 
-    if (count($basenames) === 0)
-    {
-      echo $dir.PHP_EOL;
-    }
-
     foreach ($basenames as $basename)
     {
       $filename = $dir.'/'.$basename;
@@ -25,6 +20,19 @@ class EmptyDirs
       if (is_dir($filename))
       {
         static::do($filename);
+      }
+      elseif (pathinfo($filename, PATHINFO_EXTENSION) === 'bat')
+      {
+        $contents = Assert::string(file_get_contents($filename));
+
+        if (str_starts_with($contents, "@echo off\n"))
+        {
+          // Valid
+        }
+        else
+        {
+          echo 'Invalid: '.$filename."\n";
+        }
       }
     }
   }

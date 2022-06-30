@@ -1,3 +1,4 @@
+@echo off
 echo.
 for %%p in (
   chore,

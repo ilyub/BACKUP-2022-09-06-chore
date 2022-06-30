@@ -1,1 +1,2 @@
-%~p0factory @skylib/facades peer
+@echo off
+start %~p0factory @skylib/facades peer

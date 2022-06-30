@@ -1,1 +1,2 @@
-%~p0factory @skylib/quasar-extension peer
+@echo off
+start %~p0factory @skylib/quasar-extension peer

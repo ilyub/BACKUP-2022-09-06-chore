@@ -1,1 +1,2 @@
-%~p0factory @skylib/typescript-types peer
+@echo off
+start %~p0factory @skylib/typescript-types peer
