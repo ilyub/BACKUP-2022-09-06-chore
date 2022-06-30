@@ -45,6 +45,7 @@ class BatFiles
     '..',
     '.git',
     '.npm',
+    ".repro",
     '.scannerwork',
     '.ssh',
     'backup',

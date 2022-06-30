@@ -93,6 +93,7 @@ class Linebreaks
     '..',
     '.git',
     '.npm',
+    '.repro',
     '.php-cs-fixer.cache',
     '.scannerwork',
     '.ssh',

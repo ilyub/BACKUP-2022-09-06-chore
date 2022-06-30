@@ -37,6 +37,7 @@ class EmptyDirs
     '..',
     '.git',
     '.npm',
+    '.repro',
     '.scannerwork',
     '.ssh',
     'backup',
