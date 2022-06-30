@@ -58,9 +58,9 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@skylib/config": "^3.12.0",
+    "@skylib/config": "^3.13.0",
     "cpy-cli": "^4.1.0",
-    "npm-check-updates": "^14.1.1"
+    "npm-check-updates": "^15.0.0"
   },
   "engines": {
     "node": ">=14.0.0",
