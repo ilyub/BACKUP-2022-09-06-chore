@@ -7,12 +7,6 @@ use Skylib\Config\Unknown;
 
 class Audit
 {
-  public const GREEN = "\033[92m";
-  public const RED = "\033[91m";
-  public const RESET = "\033[0m";
-  public const WHITE = "\033[97m";
-  public const YELLOW = "\033[93m";
-
   /**
    * Formats audit output.
    */
@@ -60,4 +54,10 @@ class Audit
         static::RESET.' vulnerabilities'.PHP_EOL;
     }
   }
+
+  protected const GREEN = "\033[92m";
+  protected const RED = "\033[91m";
+  protected const RESET = "\033[0m";
+  protected const WHITE = "\033[97m";
+  protected const YELLOW = "\033[93m";
 }
