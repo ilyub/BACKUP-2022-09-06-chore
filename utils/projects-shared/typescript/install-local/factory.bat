@@ -4,6 +4,8 @@ cd ../../../../%1
 echo ________________________________________________________________________________
 echo.
 echo Packaging %2
+call npm run --if-present build
+call npm run --if-present build-es
 for /f "delims=" %%p in ('npm pack --pack-destination ../.npm') do set package=%%p
 for %%d in (
   chore,
