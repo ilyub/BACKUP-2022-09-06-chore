@@ -1,2 +1,2 @@
 @echo off
-start %~p0factory @skylib/config dev
+%~p0factory config @skylib/config dev

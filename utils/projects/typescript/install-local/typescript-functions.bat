@@ -1,2 +1,2 @@
 @echo off
-start %~p0factory typescript-functions @skylib/functions peer
+%~p0factory typescript-functions @skylib/functions peer

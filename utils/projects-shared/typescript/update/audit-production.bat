@@ -15,10 +15,12 @@ for %%p in (
 ) do (
   echo ________________________________________________________________________________
   echo.
-  pushd .
   echo Running %%p/audit
+  pushd .
   cd ../../../../%%p
   call npm audit --omit=dev --json | php "%~p0../../../php/audit.php"
   popd
 )
+echo ________________________________________________________________________________
+echo.
 pause

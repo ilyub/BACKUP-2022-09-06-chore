@@ -1,2 +1,3 @@
 @echo off
-../../../utils/projects/typescript/misc/call husky:%~n0
+cd ..
+../../utils/projects/typescript/call husky:%~n0

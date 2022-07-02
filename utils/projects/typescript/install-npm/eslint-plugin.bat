@@ -1,2 +1,2 @@
 @echo off
-start %~p0factory @skylib/eslint-plugin dev
+%~p0factory eslint-plugin @skylib/eslint-plugin dev

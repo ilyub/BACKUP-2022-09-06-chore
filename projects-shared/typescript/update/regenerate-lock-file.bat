@@ -1,2 +1,3 @@
 @echo off
-../../../utils/projects-shared/typescript/update/call npm:%~n0
+cd ..
+start call ../../utils/projects-shared/typescript/call npm:%~n0

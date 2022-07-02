@@ -13,12 +13,17 @@ for %%p in (
   typescript-types,
   vscode-autofold-comments
 ) do (
-  echo ________________________________________________________________________________
-  echo.
   pushd .
-  echo Running %%p/%1
   cd ../../../%%p
-  call npm run --if-present %1 %2
+  type package.json | findstr "\"%1\":" >nul && (
+    echo ________________________________________________________________________________
+    echo.
+    echo Running %%p/%1
+    call npm run --if-present %1 %2
+  )
   popd
+
 )
+echo ________________________________________________________________________________
+echo.
 pause

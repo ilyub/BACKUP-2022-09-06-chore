@@ -1,2 +1,2 @@
 @echo off
-start %~p0factory @skylib/typescript-types peer
+%~p0factory typescript-types @skylib/typescript-types peer

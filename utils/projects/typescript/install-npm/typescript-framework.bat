@@ -1,2 +1,2 @@
 @echo off
-start %~p0factory @skylib/framework peer
+%~p0factory typescript-framework @skylib/framework peer

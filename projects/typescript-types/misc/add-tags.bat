@@ -1,2 +1,3 @@
 @echo off
-../../../utils/projects/typescript/misc/call %~n0
+cd ..
+start call ../../utils/projects/typescript/call %~n0

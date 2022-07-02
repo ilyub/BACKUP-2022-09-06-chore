@@ -1,2 +1,2 @@
 @echo off
-../../../utils/projects/typescript/install-local/%~n0
+start call ../../../utils/projects/typescript/install-local/%~n0

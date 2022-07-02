@@ -1,2 +1,3 @@
 @echo off
-../../../utils/projects/typescript/misc/call git:%~n0
+cd ..
+../../utils/projects/typescript/call git:%~n0
