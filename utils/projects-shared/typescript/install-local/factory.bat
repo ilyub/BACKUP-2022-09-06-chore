@@ -21,11 +21,25 @@ for %%d in (
   vscode-autofold-comments
 ) do (
   cd ../%%d
-  type package.json | findstr "\"%2\":" >nul && (
+  php "%~p0../../../php/has-dependency.php" dependencies %2 && (
     echo ________________________________________________________________________________
     echo.
     echo Installing %2 to %%d
-    call npm run npm:install --save-%3 ../.npm/%package%
+    call npm run npm:install --save-prod ../.npm/%package%
+  )
+  php "%~p0../../../php/has-dependency.php" devDependencies %2 && (
+    echo ________________________________________________________________________________
+    echo.
+    echo Installing %2 to %%d
+    call npm run npm:install --save-dev ../.npm/%package%
+  )
+  php "%~p0../../../php/has-dependency.php" peerDependencies %2 && (
+    echo ________________________________________________________________________________
+    echo.
+    echo Installing %2 to %%d
+    call npm run npm:install --save-peer ../.npm/%package%
   )
 )
+echo ________________________________________________________________________________
+echo.
 pause
