@@ -59,10 +59,10 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.3",
     "@commitlint/config-conventional": "^17.0.3",
-    "@skylib/config": "^3.15.0",
-    "@skylib/eslint-plugin": "^0.1.36",
+    "@skylib/config": "^3.18.0",
+    "@skylib/eslint-plugin": "^0.1.38",
     "cpy-cli": "^4.1.0",
-    "npm-check-updates": "^15.0.2"
+    "npm-check-updates": "^15.0.3"
   },
   "engines": {
     "node": ">=14.0.0",
