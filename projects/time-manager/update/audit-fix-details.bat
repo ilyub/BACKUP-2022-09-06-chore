@@ -1,2 +1,2 @@
 @echo off
-../../../utils/projects/typescript/update/%~n0
+start call ../../../utils/projects/typescript/update/%~n0
