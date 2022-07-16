@@ -1,5 +1,4 @@
 @echo off
-cd ..
 for %%p in ("%cd%") do set project=%%~np
 cd ../../../%1
 call npm run --if-present build

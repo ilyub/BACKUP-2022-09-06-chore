@@ -1,2 +1,3 @@
 @echo off
-../../../utils/projects/typescript/update/%~n0
+cd ..
+../../utils/projects/typescript/update/%~n0

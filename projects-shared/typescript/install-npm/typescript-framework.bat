@@ -1,2 +1,3 @@
 @echo off
-start call ../../../utils/projects-shared/typescript/install-npm/%~n0
+cd ..
+start call ../../utils/projects-shared/typescript/install-npm/%~n0

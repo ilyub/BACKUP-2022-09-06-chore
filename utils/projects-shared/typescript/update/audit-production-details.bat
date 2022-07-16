@@ -17,7 +17,7 @@ for %%p in (
   echo.
   echo Running %%p/audit
   pushd .
-  cd ../../../../%%p
+  cd ../../../%%p
   call npm audit --omit=dev
   popd
 )

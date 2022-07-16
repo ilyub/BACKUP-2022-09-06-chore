@@ -1,6 +1,6 @@
 @echo off
 echo.
-cd ../../../../%1
+cd ../../../%1
 for %%d in (
   chore,
   config,
@@ -19,19 +19,19 @@ for %%d in (
     echo ________________________________________________________________________________
     echo.
     echo Installing %2 to %%d
-    call npm run npm:install --save-prod npm:%2
+    call npm run npm:install --save-prod %2@latest
   )
   php "%~p0../../../php/has-dependency.php" devDependencies %2 && (
     echo ________________________________________________________________________________
     echo.
     echo Installing %2 to %%d
-    call npm run npm:install --save-dev npm:%2
+    call npm run npm:install --save-dev %2@latest
   )
   php "%~p0../../../php/has-dependency.php" peerDependencies %2 && (
     echo ________________________________________________________________________________
     echo.
     echo Installing %2 to %%d
-    call npm run npm:install --save-peer npm:%2
+    call npm run npm:install --save-peer %2@latest
   )
 )
 echo ________________________________________________________________________________
