@@ -1,5 +1,5 @@
 includes:
-  - node_modules/@skylib/config/src/phpstan.neon
+  - node_modules/@skylib/config/phpstan/recommended.neon
 parameters:
   paths:
     - utils

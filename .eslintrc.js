@@ -1,6 +1,6 @@
 module.exports = {
   extends: [
-    require.resolve("@skylib/config/src/eslintrc"),
+    "./node_modules/@skylib/config/eslint",
     "./.eslintrc.overrides",
     "./.eslintrc.rule-overrides",
     "./.eslintrc.temp"
